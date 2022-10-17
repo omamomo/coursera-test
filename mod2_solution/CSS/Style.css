@@ -1,0 +1,175 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	width: 100%;
+}
+@media(min-width: 992px) {
+	section {
+		float: left;
+		margin-bottom: 50px;
+		margin-left: 30px;
+		width: 30%;
+		height: auto;
+	}
+	#box1 {
+		background-color: gray;
+		border: 2px solid black;
+	}
+	#box2 {
+		background-color: gray;
+		border: 2px solid black;
+	}
+	#box3 {
+		background-color: gray;
+		border: 2px solid black;
+	}
+	h1 {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	#title1 {
+		border: 1px solid black;
+		background-color: pink;
+		margin-bottom: 10px;
+		width: 70px;
+		float: right;
+		text-align: center;
+	}
+	#title2 {
+		border: 1px solid black;
+		background-color: green;
+		margin-bottom: 10px;
+		width: 70px;
+		float: right;
+		text-align: center;
+	}
+	#title3 {
+		border: 1px solid black;
+		background-color: blue;
+		margin-bottom: 10px;
+		width: 70px;
+		float: right;
+		text-align: center;
+	}
+	#content {
+		clear: right;
+		padding: 0 2px 0 5px;
+		text-align: left;
+	}
+}
+@media(min-width: 768px) and (max-width: 991px) {
+	section {
+		float: left;
+		margin-bottom: 50px;
+		margin-left: 30px;
+		width: 45%;
+		height: auto;
+	}
+	#box1 {
+		background-color: gray;
+		border: 2px solid black;
+	}
+	#box2 {
+		background-color: gray;
+		border: 2px solid black;
+	}
+	#box3 {
+		background-color: gray;
+		border: 2px solid black;
+		width: 208%;
+	}
+	h1 {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	#title1 {
+		border: 1px solid black;
+		background-color: pink;
+		margin-bottom: 10px;
+		width: 70px;
+		float: right;
+		text-align: center;
+	}
+	#title2 {
+		border: 1px solid black;
+		background-color: green;
+		margin-bottom: 10px;
+		width: 70px;
+		float: right;
+		text-align: center;
+	}
+	#title3 {
+		border: 1px solid black;
+		background-color: blue;
+		margin-bottom: 10px;
+		width: 70px;
+		float: right;
+		text-align: center;
+	}
+	#content {
+		clear: right;
+		padding: 0 2px 0 5px;
+		text-align: left;
+	}
+}
+@media(max-width: 767px) {
+	section {
+		float: left;
+		margin-bottom: 50px;
+		margin-left: 30px;
+		width: 90%;
+		height: auto;
+	}
+	#box1 {
+		background-color: gray;
+		border: 2px solid black;
+		padding-left: 10px;
+	}
+	#box2 {
+		background-color: gray;
+		border: 2px solid black;
+		padding-left: 10px;
+	}
+	#box3 {
+		background-color: gray;
+		border: 2px solid black;
+		padding-left: 10px;
+	}
+	h1 {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	#title1 {
+		border: 1px solid black;
+		background-color: pink;
+		margin-bottom: 10px;
+		width: 70px;
+		float: right;
+		text-align: center;
+	}
+	#title2 {
+		border: 1px solid black;
+		background-color: green;
+		margin-bottom: 10px;
+		width: 70px;
+		float: right;
+		text-align: center;
+	}
+	#title3 {
+		border: 1px solid black;
+		background-color: blue;
+		margin-bottom: 10px;
+		width: 70px;
+		float: right;
+		text-align: center;
+	}
+	#content {
+		clear: right;
+		padding: 0 2px 0 5px;
+		text-align: left;
+	}
+}
