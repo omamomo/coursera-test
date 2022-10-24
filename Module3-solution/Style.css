@@ -1,0 +1,56 @@
+body{
+font-size: 16px
+color: black;
+background-color: white;
+height: 1000px;
+}
+.container-fluid {
+	background-color: gray;
+}
+.navbar {
+	--bs-navbar-active-color: white;
+}
+.navbar-toggler {
+	background-color: white;
+}
+.navbar-brand {
+	padding-top: 25px;
+} 
+.navbar-nav {
+	border: 1px solid black;
+}
+.navbar-nav a:hover {
+	background-color: gray;
+}
+.nav-link {
+	text-align: center;
+} 
+.nav-item {
+	background-color: white;
+	border: 1px solid black;
+}
+@media (min-width: 992px) {
+	.navbar-nav {
+		visibility: hidden;
+	}
+}
+section {
+		margin-bottom: 50px;
+		margin-left: 30px;
+		width: 100%;
+		height: auto;
+	}
+	#box {
+		background-color: gray;
+		/*border: 1px solid black;*/
+	}
+	#content {
+		margin: auto 20px;
+		padding: auto 20px;
+		text-align: justify;
+	}
+	#title {
+		font-weight: bold;
+		font-size: 1.4em;
+	}
+	
