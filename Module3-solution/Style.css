@@ -29,8 +29,11 @@ height: 1000px;
 	background-color: white;
 	border: 1px solid black;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
 	.navbar-nav {
+		visibility: hidden;
+	}
+	.navbar-toggler {
 		visibility: hidden;
 	}
 }
