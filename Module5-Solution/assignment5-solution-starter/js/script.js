@@ -83,10 +83,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  function (responseText) {
-    document.querySelector("#main-content")
-      .innerHTML = responseText;
-  }, // ***** <---- TODO: STEP 1: Substitute [...] ******
+  buildAndShowHomeHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitly setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
@@ -100,22 +97,13 @@ function buildAndShowHomeHTML (categories) {
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
-      $ajaxUtils.sendGetRequest(
-    categoriesTitleHtml,
-    function (categoriesTitleHtml) {
-      // Retrieve single category snippet
-      $ajaxUtils.sendGetRequest(
-        categoryHtml,
-        function (categoryHtml) {
           var chosenCategoryShortName =
-            buildchosenCategoryShortName(categories,
-                                    categoriesTitleHtml,
-                                    categoryHtml);
-          insertHtml("#main-content", chooseRandomCategory);
-        },
-        false);
-    },
-    false);
+            chooseRandomCategory(categories).short_name;
+          chosenCategoryShortName="'"+chosenCategoryShortName+"'";
+      console.log(chosenCategoryShortName);
+      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,"randomCategoryShortName",chosenCategoryShortName);
+      console.log(homeHtmlToInsertIntoMainPage);
+       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
 
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
@@ -151,7 +139,7 @@ function buildAndShowHomeHTML (categories) {
 // Given array of category objects, returns a random category object.
 function chooseRandomCategory (categories) {
   // Choose a random index into the array (from 0 inclusively until array length (exclusively))
-  for (var randomArrayIndex = Math.floor(Math.random(i = 0;) i < categories.length));
+  var randomArrayIndex = Math.floor(Math.random() * categories.length);
 
   // return category object with that randomArrayIndex
   return categories[randomArrayIndex];
